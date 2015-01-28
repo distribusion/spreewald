@@ -1,3 +1,7 @@
+# Why fork?
+
+During our Rails 4.2 upgrade we discovered that switching to Capybara 2.X was less work than sticking to 1.X. In order to make spreewald compatible with the new capybara version, a few changes in the gem istelf were necessary. Find the original README below…
+
 # Spreewald
 
 Spreewald is a collection of useful steps for cucumber. Feel free to fork.
