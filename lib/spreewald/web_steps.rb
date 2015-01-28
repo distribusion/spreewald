@@ -643,7 +643,7 @@ end
 When /^I perform basic authentication as "([^\"]*)\/([^\"]*)" and go to (.*)$/ do |user, password, page_name|
   path = _path_to(page_name)
   if Capybara::current_driver == :selenium
-    visit("http://#{user}:#{password}@#{page.driver.rack_server.host}:#{page.driver.rack_server.port}#{path}")
+    visit("http://#{user}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}")
   else
     authorizers = [
       (page.driver.browser if page.driver.respond_to?(:browser)),
