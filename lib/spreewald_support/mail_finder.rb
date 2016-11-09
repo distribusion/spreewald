@@ -1,5 +1,7 @@
 # coding: UTF-8
 
+require 'andand'
+
 class MailFinder
   class << self
 
